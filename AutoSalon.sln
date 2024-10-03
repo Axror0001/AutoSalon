@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSalonAPI", "AutoSalon\AutoSalonAPI.csproj", "{DF6E20EA-B84A-4D86-994B-85E7655F826A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3073AC72-AE5E-420D-A69D-50EE9E830A48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSalonUI", "AutoSalonUI\AutoSalonUI.csproj", "{1BC0BD07-0CEA-4248-8203-0744CB751701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF6E20EA-B84A-4D86-994B-85E7655F826A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF6E20EA-B84A-4D86-994B-85E7655F826A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF6E20EA-B84A-4D86-994B-85E7655F826A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF6E20EA-B84A-4D86-994B-85E7655F826A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC0BD07-0CEA-4248-8203-0744CB751701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC0BD07-0CEA-4248-8203-0744CB751701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC0BD07-0CEA-4248-8203-0744CB751701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC0BD07-0CEA-4248-8203-0744CB751701}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DF6E20EA-B84A-4D86-994B-85E7655F826A} = {3073AC72-AE5E-420D-A69D-50EE9E830A48}
+		{1BC0BD07-0CEA-4248-8203-0744CB751701} = {3073AC72-AE5E-420D-A69D-50EE9E830A48}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91EB6EBF-BC04-4E15-A88E-4DC38D05B2C4}
+	EndGlobalSection
+EndGlobal
