@@ -1,6 +1,8 @@
-﻿namespace AutoSalon.DTO.CompanyDTO.BydCompanyDto
+﻿using AutoSalon.HelperClassDTO;
+
+namespace AutoSalon.DTO.CompanyDTO.BydCompanyDto
 {
-    public class BydCompanyResponce
+    public class BydCompanyResponce : CompanyDto
     {
         public string Code { get; set; }
         public string Title { get; set; }

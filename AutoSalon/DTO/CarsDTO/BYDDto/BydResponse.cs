@@ -1,6 +1,8 @@
-﻿namespace AutoSalon.DTO.CarsDTO.BYDDto
+﻿using AutoSalon.Models.UnversalCar;
+
+namespace AutoSalon.DTO.CarsDTO.BYDDto
 {
-    public class BydResponse
+    public class BydResponse : Car
     {
         public string Code { get; set; }
         public string Title { get; set; }
