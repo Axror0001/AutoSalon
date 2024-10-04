@@ -1,4 +1,5 @@
 ﻿using AutoSalon.DTO.CompanyDTO.MersCompanyDto;
+using AutoSalon.Models.Companys.BMW;
 using AutoSalon.Models.Companys.MersedensBens;
 
 namespace AutoSalonAPI.Reposiotry.CompanyRepository.MersCompanyRepository
@@ -13,5 +14,6 @@ namespace AutoSalonAPI.Reposiotry.CompanyRepository.MersCompanyRepository
         Task<List<MersCompanyResponce>> GetAllMersCompanyList(string culture, CancellationToken cancellationToken = default);
         Task<MersedensBenscompanys?> CreateAsync(MersedensBenscompanys mersCompany, CancellationToken cancellationToken = default);
         Task<MersedensBenscompanys> UpdateMersCompanyAsync(MersedensBenscompanys mersCompany, CancellationToken cancellationToken = default);
+        Task<Boolean> Delete(MersedensBenscompanys merscompanys, CancellationToken cancellationToken = default);
     }
 }

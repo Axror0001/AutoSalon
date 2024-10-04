@@ -13,5 +13,6 @@ namespace AutoSalonAPI.Reposiotry.CompanyRepository.BmwCompanyRepository
         Task<List<BmwCompanyResponce>> GetAllBMWcompanysList(string culture, CancellationToken cancellationToken = default);
         Task<BMWcompanys?> CreateAsync(BMWcompanys bmwcompanys, CancellationToken cancellationToken = default);
         Task<BMWcompanys> UpdateBMWcompanysAsync(BMWcompanys bmwcompanys, CancellationToken cancellationToken = default);
+        Task<Boolean> Delete(BMWcompanys bydcompanys, CancellationToken cancellationToken = default);
     }
 }

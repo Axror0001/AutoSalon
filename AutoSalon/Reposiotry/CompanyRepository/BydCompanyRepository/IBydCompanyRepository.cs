@@ -1,4 +1,5 @@
 ﻿using AutoSalon.DTO.CompanyDTO.BydCompanyDto;
+using AutoSalon.Models.Companys.BMW;
 using AutoSalon.Models.Companys.BYD;
 
 namespace AutoSalonAPI.Reposiotry.CompanyRepository.BydCompanyRepository
@@ -13,5 +14,6 @@ namespace AutoSalonAPI.Reposiotry.CompanyRepository.BydCompanyRepository
         Task<List<BydCompanyResponce>> GetAllBYDcompanysList(string culture, CancellationToken cancellationToken = default);
         Task<BYDcompanys?> CreateAsync(BYDcompanys BYDcompanys, CancellationToken cancellationToken = default);
         Task<BYDcompanys> UpdateBYDcompanysAsync(BYDcompanys BYDcompanys, CancellationToken cancellationToken = default);
+        Task<Boolean> Delete(BYDcompanys bydcompanys, CancellationToken cancellationToken = default);
     }
 }

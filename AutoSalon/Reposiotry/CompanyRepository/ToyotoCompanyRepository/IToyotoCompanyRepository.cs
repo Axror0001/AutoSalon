@@ -1,4 +1,5 @@
 ﻿using AutoSalon.DTO.CompanyDTO.ToyotoCompanyDto;
+using AutoSalon.Models.Companys.BMW;
 using AutoSalon.Models.Companys.Toyoto;
 
 namespace AutoSalonAPI.Reposiotry.CompanyRepository.ToyotoCompanyRepository
@@ -13,5 +14,6 @@ namespace AutoSalonAPI.Reposiotry.CompanyRepository.ToyotoCompanyRepository
         Task<List<ToyotoCompanyResponce>> GetAllToyotocompanysList(string culture, CancellationToken cancellationToken = default);
         Task<Toyotocompanys?> CreateAsync(Toyotocompanys toyotoCompany, CancellationToken cancellationToken = default);
         Task<Toyotocompanys> UpdateToyotocompanysAsync(Toyotocompanys toyotoCompany, CancellationToken cancellationToken = default);
+        Task<Boolean> Delete(Toyotocompanys toyotoCompanys, CancellationToken cancellationToken = default);
     }
 }
