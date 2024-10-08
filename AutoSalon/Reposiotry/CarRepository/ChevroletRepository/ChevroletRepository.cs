@@ -1,4 +1,5 @@
 ﻿using AutoSalon.Data;
+using AutoSalon.DTO.CarsDTO.BYDDto;
 using AutoSalon.DTO.CarsDTO.ChevroletDto;
 using AutoSalon.Models.Cars.Chevrolet;
 using Microsoft.EntityFrameworkCore;
@@ -93,6 +94,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.ChevroletRepository
                     var ChevroletResponce = new ChevroletResponse();
                     ChevroletResponce.Id = item.Id;
                     ChevroletResponce.Code = item.Code;
+                    ChevroletResponce.Name = item.Name;
+                    ChevroletResponce.Color = item.Color;
                     ChevroletResponce.Title = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.FullTitle ?? item.Translations.FirstOrDefault()?.FullTitle ?? string.Empty;
                     ChevroletResponce.ShortTitle = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.ShortTitle ?? item.Translations.FirstOrDefault()?.ShortTitle ?? string.Empty;
 
@@ -123,6 +126,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.ChevroletRepository
                 {
                     Id = s.Id,
                     Code = s.Code,
+                    Name = s.Name,
+                    Color = s.Color,
                     Title = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).FullTitle ?? s.Translations.FirstOrDefault().FullTitle ?? string.Empty,
                     ShortTitle = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).ShortTitle ?? s.Translations.FirstOrDefault().ShortTitle ?? string.Empty,
                 });

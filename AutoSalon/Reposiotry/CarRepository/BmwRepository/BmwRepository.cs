@@ -17,7 +17,10 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.BmwRepository
         {
             try
             {
-                var result = await _dbContext.BMWcars.Where(x => x.Id.Equals(bmwcars.Id) && !x.IsDeleted && x.Color.Equals(bmwcars.Color) && x.CompanyId.Equals(bmwcars.CompanyId) && x.Name.Contains(bmwcars.Name)).ToListAsync();
+                var result = await _dbContext.BMWcars.Where(x => x.Id.Equals(bmwcars.Id)
+                && !x.IsDeleted && x.Color.Equals(bmwcars.Color)
+                && x.CompanyId.Equals(bmwcars.CompanyId)
+                && x.Name.Contains(bmwcars.Name)).ToListAsync();
                 if(result is null)
                 {
                     var translation = _dbContext.Set<BMWTranslation>();
@@ -99,6 +102,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.BmwRepository
                     var bmwResponce = new BmwResponse();
                     bmwResponce.Id = item.Id;
                     bmwResponce.Code = item.Code;
+                    bmwResponce.Name = item.Name;
+                    bmwResponce.Color = item.Color;
                     bmwResponce.Title = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.FullTitle ?? item.Translations.FirstOrDefault()?.FullTitle ?? string.Empty;
                     bmwResponce.ShortTitle = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.ShortTitle ?? item.Translations.FirstOrDefault()?.ShortTitle ?? string.Empty;
                     
@@ -129,6 +134,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.BmwRepository
                 {
                     Id = s.Id,
                     Code = s.Code,
+                    Name = s.Name,
+                    Color = s.Color,
                     Title = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).FullTitle ?? s.Translations.FirstOrDefault().FullTitle ?? string.Empty,
                     ShortTitle = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).ShortTitle ?? s.Translations.FirstOrDefault().ShortTitle ?? string.Empty,
                 });

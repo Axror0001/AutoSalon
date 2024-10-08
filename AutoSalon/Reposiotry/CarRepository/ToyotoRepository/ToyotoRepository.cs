@@ -1,4 +1,5 @@
 ﻿using AutoSalon.Data;
+using AutoSalon.DTO.CarsDTO.BYDDto;
 using AutoSalon.DTO.CarsDTO.ToyotoDto;
 using AutoSalon.Models.Cars.Toyoto;
 using Microsoft.EntityFrameworkCore;
@@ -79,6 +80,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.ToyotoRepository
                     var MersResponce = new ToyotoResponse();
                     MersResponce.Id = item.Id;
                     MersResponce.Code = item.Code;
+                    MersResponce.Name = item.Name;
+                    MersResponce.Color = item.Color;
                     MersResponce.Title = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.FullTitle ?? item.Translations.FirstOrDefault()?.FullTitle ?? string.Empty;
                     MersResponce.ShortTitle = item.Translations?.FirstOrDefault(x => x.LanguageCode.Equals(language))?.ShortTitle ?? item.Translations.FirstOrDefault()?.ShortTitle ?? string.Empty;
 
@@ -123,6 +126,8 @@ namespace AutoSalonAPI.Reposiotry.CarRepository.ToyotoRepository
                 {
                     Id = s.Id,
                     Code = s.Code,
+                    Name = s.Name,
+                    Color = s.Color,
                     Title = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).FullTitle ?? s.Translations.FirstOrDefault().FullTitle ?? string.Empty,
                     ShortTitle = s.Translations.FirstOrDefault(t => t.LanguageCode == culture).ShortTitle ?? s.Translations.FirstOrDefault().ShortTitle ?? string.Empty,
                 });
